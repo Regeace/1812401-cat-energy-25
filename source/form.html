@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Каталог товаров Кэт энерджи</title>
-    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="icon" href="favicon.ico"> -->
     <!-- <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"> -->
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--mobile">
     <header class="main-header">
       <div class="main-header__logo-container">
         <a class="main-header__logo-image logo-image" href="index.html">
@@ -37,8 +37,8 @@
     </header>
 
     <main class="main-form">
-      <h1 class="main-form__title">Подбор программы</h1>
-      <p class="main-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <h1 class="main-form__title title-primary title-primary--mobile">Подбор программы</h1>
+      <p class="main-form__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
 
       <form class="filters" action="https://echo.htmlacademy.ru/" method="post">
         <div class="filters__container">
@@ -88,24 +88,30 @@
         </div>
 
         <div class="filters__container">
-          <h2 class="filters__title">Контактные данные (владельца кота)</h2>
+          <h2 class="filters__title title-secondary title-secondary--mobile">
+            Контактные данные (владельца кота)
+          </h2>
           <label class="filters__label">
             E-mail:*
-            <input class="filters__input-field filters__input-field--icon-mail" type="email" name="email" value="kuklachev@gmail.com" required>
+            <input class="filters__input-field filters__input-field--icon filters__input-field--icon-mail" type="email" name="email" value="kuklachev@gmail.com" required>
           </label>
           <label class="filters__label">
             Телефон:*
-            <input class="filters__input-field filters__input-field--icon-phone" type="tel" name="phone" pattern="8[0-9]{10}" value="8 (960) 900-60-90" required>
+            <input class="filters__input-field filters__input-field--icon filters__input-field--icon-phone" type="tel" name="phone" pattern="8[0-9]{10}" value="8 (960) 900-60-90" required>
           </label>
         </div>
 
         <div class="filters__container">
-          <h2 class="filters__title">Комментарий</h2>
-          <textarea class="filters__input-field "name="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+          <h2 class="filters__title title-secondary title-secondary--mobile">
+            Комментарий
+          </h2>
+          <textarea class="filters__input-field filters__input-textarea" name="comment">Расскажите обо всех повадках кота</textarea>
         </div>
 
         <div class="filters__container">
-          <h2 class="filters__title">Дополнительно</h2>
+          <h2 class="filters__title title-secondary title-secondary--mobile">
+            Дополнительно
+          </h2>
           <fieldset class="filters__group checkbox">
             <legend class="visually-hidden">Необязательные к приобретению товары</legend>
             <ul class="checkbox__list">
@@ -148,9 +154,9 @@
       </form>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--mobile">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="page-footer__shop-location-container shop-location">
+      <div class="page-footer__shop-location-container shop-location shop-location--mobile">
         <p class="shop-location__text">Приглашаем<br>к сотрудничеству дилеров!</p>
         <address class="shop-location__address">
           ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
@@ -159,10 +165,10 @@
 
       <div class="page-footer__map-container">
         <!-- Оставил пока карту картинкой. Она должна быть интерактивной. -->
-        <img class="page-footer__map" src="" width="" height="" alt="Положение магазина Кэт энерджи на карте.">
+        <img class="page-footer__map" src="" width="320" height="362" alt="Положение магазина Кэт энерджи на карте.">
       </div>
 
-      <div class="page-footer__links-container">
+      <div class="page-footer__links-container page-footer__links-container--mobile">
         <a class="page-footer__logo-name logo-name" href="index.html">
           <img class="logo-name__image" src="" width="" height="" alt="Кэт энерджи.">
         </a>

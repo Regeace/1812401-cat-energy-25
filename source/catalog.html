@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Каталог товаров Кэт энерджи</title>
-    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="icon" href="favicon.ico"> -->
     <!-- <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"> -->
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--mobile">
     <header class="main-header">
       <div class="main-header__logo-container">
         <a class="main-header__logo-image logo-image" href="index.html">
@@ -37,7 +37,7 @@
     </header>
 
     <main class="main-catalog">
-      <h1 class="main-catalog__title">Каталог продукции</h1>
+      <h1 class="main-catalog__title title-primary title-primary--mobile">Каталог продукции</h1>
 
       <section class="primary-catalog">
         <h2 class="visually-hidden">Основные товары</h2>
@@ -218,7 +218,9 @@
       </section>
 
       <section class="secondary-catalog">
-        <h2 class="secondary-catalog__title">Дополнительные товары</h2>
+        <h2 class="secondary-catalog__title title-secondary title-secondary--mobile title-secondary--mobile-special">
+          Дополнительные товары
+        </h2>
         <ol class="secondary-catalog__list">
           <li class="secondary-catalog__item item-card-secondary">
             <a class="item-card-secondary__link" href="#">
@@ -228,7 +230,7 @@
               <dt class="item-card-secondary__value">1 упаковка (100 г)</dt>
               <dd class="item-card-secondary__price">200 Р.</dd>
             </dl>
-            <a class="item-card-secondary__link-button button button-primary" href="#">Заказать</a>
+            <a class="item-card-secondary__link-button button button--primary" href="#">Заказать</a>
           </li>
           <li class="secondary-catalog__item item-card-secondary">
             <a class="item-card-secondary__link" href="#">
@@ -238,7 +240,7 @@
               <dt class="item-card-secondary__value">5 литров</dt>
               <dd class="item-card-secondary__price">50 Р.</dd>
             </dl>
-            <a class="item-card-secondary__link-button button button-primary" href="#">Заказать</a>
+            <a class="item-card-secondary__link-button button button--primary" href="#">Заказать</a>
           </li>
           <li class="secondary-catalog__item item-card-secondary">
             <a class="item-card-secondary__link" href="#">
@@ -248,7 +250,7 @@
               <dt class="item-card-secondary__value">1 литр</dt>
               <dd class="item-card-secondary__price">100 Р.</dd>
             </dl>
-            <a class="item-card-secondary__link-button button button-primary" href="#">Заказать</a>
+            <a class="item-card-secondary__link-button button button--primary" href="#">Заказать</a>
           </li>
           <li class="secondary-catalog__item item-card-secondary">
             <a class="item-card-secondary__link" href="#">
@@ -258,22 +260,24 @@
               <dt class="item-card-secondary__value">1 упаковка (30 г)</dt>
               <dd class="item-card-secondary__price">300 Р.</dd>
             </dl>
-            <a class="item-card-secondary__link-button button button-primary" href="#">Заказать</a>
+            <a class="item-card-secondary__link-button button button--primary" href="#">Заказать</a>
           </li>
         </ol>
       </section>
 
-      <div class="present present--image">
-        <h2 class="visually-hidden">Подарок</h2>
-        <p class="present__text">
-          Закажите все и получите чехол для кота в подарок!
-        </p>
+      <div class="present present--image-mobile">
+        <div class="present__background-color">
+          <h2 class="visually-hidden">Подарок</h2>
+          <p class="present__text">
+            Закажите все<br> и получите чехол для кота в подарок!
+          </p>
+        </div>
       </div>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--mobile">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="page-footer__shop-location-container shop-location">
+      <div class="page-footer__shop-location-container shop-location shop-location--mobile">
         <p class="shop-location__text">Приглашаем<br>к сотрудничеству дилеров!</p>
         <address class="shop-location__address">
           ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
@@ -282,10 +286,10 @@
 
       <div class="page-footer__map-container">
         <!-- Оставил пока карту картинкой. Она должна быть интерактивной. -->
-        <img class="page-footer__map" src="" width="" height="" alt="Положение магазина Кэт энерджи на карте.">
+        <img class="page-footer__map" src="" width="320" height="362" alt="Положение магазина Кэт энерджи на карте.">
       </div>
 
-      <div class="page-footer__links-container">
+      <div class="page-footer__links-container page-footer__links-container--mobile">
         <a class="page-footer__logo-name logo-name" href="index.html">
           <img class="logo-name__image" src="" width="" height="" alt="Кэт энерджи.">
         </a>
