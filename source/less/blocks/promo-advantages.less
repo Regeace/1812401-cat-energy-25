@@ -1,9 +1,15 @@
-.promo-advantages {
-  display: flex;
-}
-
 .promo-advantages__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+@media (min-width: @desktop) {
+  .promo-advantages__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 80px;
+  }
 }

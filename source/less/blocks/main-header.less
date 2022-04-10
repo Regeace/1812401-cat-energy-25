@@ -1,6 +1,38 @@
 .main-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 10px;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px 20px;
+}
+
+.main-header__logo-name {
+  padding: 0;
+}
+
+.main-header__logo-container {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
+  width: calc(50% + 51px);
+}
+
+.main-header__logo-image {
+  margin-right: auto;
+}
+
+@media (min-width: @tablet) {
+  .main-header__logo-container {
+    width: initial;
+  }
+
+  .main-header__logo-image {
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .main-header {
+    z-index: 2;
+  }
 }
