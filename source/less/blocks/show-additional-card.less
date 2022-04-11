@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 19px 0 25px 0;
+  padding: 0 0 25px 0;
 }
 
 .show-additional-card__button-top {
@@ -20,4 +20,26 @@
   font-size: 12px;
   line-height: 20px;
   color: var(--font-color-secondary);
+}
+
+@media (min-width: @tablet) {
+  .show-additional-card {
+    padding: 38px;
+    text-align: center;
+    border: 2px solid var(--primary-bg);
+  }
+
+  .show-additional-card__button-top {
+    max-width: 150px;
+    padding-top: 161px;
+    padding-bottom: 23px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .show-additional-card__text {
+    max-width: 167px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }

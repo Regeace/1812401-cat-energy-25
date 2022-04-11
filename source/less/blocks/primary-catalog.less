@@ -7,3 +7,18 @@
   padding: 0;
   list-style-type: none;
 }
+
+@media (min-width: @tablet) {
+  .primary-catalog__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .primary-catalog__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 62px 80px;
+  }
+}

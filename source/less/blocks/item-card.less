@@ -10,3 +10,47 @@
   color: #222222;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet) {
+  .item-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 80px;
+    padding: 38px;
+    background-color: var(--primary-bg);
+  }
+
+  .item-card__link-image {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 54px);
+  }
+
+ .item-card__link-title {
+   align-self: center;
+   padding-top: 161px;
+   padding-bottom: 20px;
+  }
+
+  .item-card__title {
+    max-width: 150px;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .item-card__characteristics {
+    margin-bottom: 32px;
+  }
+
+  .primary-catalog__item {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .item-card__title {
+    line-height: 21px;
+  }
+}
