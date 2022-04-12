@@ -49,7 +49,9 @@
           </h2>
           <p class="promo-header__slogan">Занялся собой? Займись котом!</p>
           <img class="promo-header__image" src="" width="280" height="270" alt="Корм Кэт энерджи курица.">
-          <a class="promo-header__button button button--special button--primary" href="form.html">Подобрать программу</a>
+          <a class="promo-header__button button button--special button--primary" href="form.html">
+            Подобрать программу
+          </a>
           <div class="background-container">
             <div class="background-container__background-color"></div>
           </div>
@@ -120,20 +122,23 @@
             </div>
             <div class="example__item">
               <dt class="example__number">60 дней</dt>
-              <dd class="example__description">затрачено времени</dd>
+              <dd class="example__description example__description--special">затрачено времени</dd>
             </div>
           </dl>
-          <span class="example__list-text">Затраты на питание: 15 000 руб.</span>
+          <span class="example__list-text">Затраты на питание: <span class="example__list-text--special">15 000 руб.</span></span>
         </div>
 
         <div class="example__compare-images">
           <img class="example__image" src="" width="280" height="232" alt="Кот до кормления.">
+          <img class="example__image example__image--hidden example__image--special" src="" width="280" height="232" alt="Кот в сравнении: до кормления и после кормления.">
           <img class="example__image example__image--hidden" src="" width="280" height="232" alt="Кот после кормления.">
           <!-- Подразумеваю, что переключатель картинок подобен разобранному в тренажёре "Плавные переходы".
           Не стал оборачивать в form (как и select в Седоне). -->
           <div class="example__toggle">
             <label class="example__toggle-text" for="was">Было</label>
             <input class="example__radio" type="radio" id="was" name="example-image" value="was" checked>
+            <label class="visually-hidden" for="comparison">В сравнении.</label>
+            <input class="example__radio example__radio--hidden" type="radio" id="comparison" name="example-image" value="comparison">
             <input class="example__radio" type="radio" id="become" name="example-image" value="become">
             <label class="example__toggle-text" for="become">Стало</label>
           </div>
@@ -146,7 +151,7 @@
       <div class="page-footer__shop-location-container shop-location">
         <p class="shop-location__text">Приглашаем<br>к сотрудничеству дилеров!</p>
         <address class="shop-location__address">
-          ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
+          ул. Большая Конюшенная, д. 19/8 <span class="shop-location__address--special">Санкт-Петербург</span>
         </address>
       </div>
 

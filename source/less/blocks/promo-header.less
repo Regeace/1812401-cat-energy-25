@@ -30,3 +30,53 @@
 .promo-header__button {
   color: var(--white);
 }
+
+@media (min-width: @tablet) {
+  .promo-header {
+    position: relative;
+    align-items: flex-start;
+    min-height: 837px;
+    padding-left: 120px;
+    text-align: left;
+    color: var(--font-color-primary);
+  }
+
+  .promo-header__title {
+    max-width: 420px;
+  }
+
+  .promo-header__slogan {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .promo-header__image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 709px;
+    height: 609px;
+  }
+
+  .promo-header__button {
+    width: 244px;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .promo-header {
+    min-height: 700px;
+  }
+
+  .promo-header__image {
+    top: 0;
+    bottom: auto;
+    right: 220px;
+    left: auto;
+    width: 552px;
+    height: 499px;
+  }
+}

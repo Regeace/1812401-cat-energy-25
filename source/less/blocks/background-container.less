@@ -5,6 +5,7 @@
   top: 0;
   left: -20px;
   width: calc(100% + 40px);
+  height: 302px;
   background-image: url("../../img/cat-background-small.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -13,6 +14,26 @@
 }
 
 .background-container__background-color {
-  height: 302px;
+  height: 100%;
   background-color: rgba(104, 183, 56, 0.85);
+}
+
+@media (min-width: @tablet) {
+  .background-container {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop) {
+  .background-container {
+    display: flex;
+    right: -110px;
+    left: auto;
+    top: -460px;
+    width: 720px;
+    height: 1004px;
+    background-image: url("../../img/cat-background-large.jpg");
+    background-position: 0 100%;
+    background-size: 720px 694px;
+  }
 }

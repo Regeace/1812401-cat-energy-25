@@ -1,26 +1,68 @@
 .present {
+  width: 279px;
+  margin: 0 auto;
+  background-image: url("../../img/cat-present.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-image: url("../../img/cat-present_smal.jpg");
   background-size: 279px 289px;
 }
 
 .present__background-color {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 280px;
-  min-height: 290px;
-  padding-top: 187px;
+  height: 289px;
   background-color: rgba(104, 183, 56, 0.85);
 }
 
 .present__text {
   width: 161px;
-  margin: 0;
+  margin: 0 auto;
+  padding-top: 187px;
+  padding-bottom: 20px;
   font-family: var(--secondary-font);
   font-size: 16px;
   line-height: 20px;
   color: var(--white);
   text-align: center;
+}
+
+@media (min-width: @tablet) {
+  .present {
+    width: 707px;
+    background-image: url("../../img/cat-present-large.jpg");
+    background-size: 707px 200px;
+  }
+
+  .present__background-color {
+    width: 707px;
+    height: 200px;
+  }
+
+  .present__text {
+    width: auto;
+    margin: 0;
+    padding: 70px 124px 20px 422px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop) {
+  .present {
+    position: absolute;
+    top: 138px;
+    right: 110px;
+    width: 246px;
+    background-image: url("../../img/cat-present-small.jpg");
+    background-size: 246px 289px;
+  }
+
+  .present__background-color {
+    width: 246px;
+    height: 289px;
+  }
+
+  .present__text {
+    width: 161px;
+    margin: 0 auto;
+    padding: 185px 0 20px 0;
+    text-align: center;
+  }
 }

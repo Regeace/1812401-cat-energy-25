@@ -40,7 +40,7 @@
     <main class="main-catalog">
       <h1 class="main-catalog__title title-primary">Каталог продукции</h1>
 
-      <section class="primary-catalog">
+      <section class="main-catalog__primary primary-catalog">
         <h2 class="visually-hidden">Основные товары</h2>
         <ol class="primary-catalog__list">
           <li class="primary-catalog__item item-card">
@@ -218,7 +218,7 @@
         </ol>
       </section>
 
-      <section class="secondary-catalog">
+      <section class="main-catalog__secondary secondary-catalog">
         <h2 class="secondary-catalog__title title-secondary title-secondary--special">
           Дополнительные товары
         </h2>
@@ -264,24 +264,24 @@
             <a class="item-card-secondary__link-button button button--primary" href="#">Заказать</a>
           </li>
         </ol>
-      </section>
 
-      <div class="present">
-        <div class="present__background-color">
-          <h2 class="visually-hidden">Подарок</h2>
-          <p class="present__text">
-            Закажите все<br> и получите чехол для кота в подарок!
-          </p>
+        <div class="present">
+          <div class="present__background-color">
+            <h2 class="visually-hidden">Подарок</h2>
+            <p class="present__text">
+              Закажите все<br> и получите чехол для кота в подарок!
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer class="page-footer">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="page-footer__shop-location-container shop-location">
+      <div class="page-footer__shop-location-container shop-location shop-location--special">
         <p class="shop-location__text">Приглашаем<br>к сотрудничеству дилеров!</p>
         <address class="shop-location__address">
-          ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span>
+          ул. Большая Конюшенная, д. 19/8 <span class="shop-location__address--special">Санкт-Петербург</span>
         </address>
       </div>
 
