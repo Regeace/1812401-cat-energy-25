@@ -20,10 +20,11 @@
       </div>
 
       <nav class="main-navigation">
-        <button class="main-navigation__toggle main-navigation__toggle--open" type="button">
+        <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
+          <span class="main-navigation__toggle-image"></span>
         </button>
-        <ul class="main-navigation__list">
+        <ul class="main-navigation__list main-navigation__list--closed">
           <li class="main-navigation__item">
             <a class="main-navigation__link" href="index.html">Главная</a>
           </li>
@@ -42,9 +43,9 @@
       <p class="main-form__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
 
       <form class="filters" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="filters__container">
+        <div class="filters__container filters__container--top">
           <h2 class="filters__title filters__title-hidden">Данные кота</h2>
-          <fieldset class="filters__group">
+          <fieldset class="filters__group filters__group--top">
             <legend class="visually-hidden">Паспортные данные</legend>
             <label class="filters__label">
               Имя:*
@@ -92,14 +93,16 @@
           <h2 class="filters__title title-secondary">
             Контактные данные (владельца кота)
           </h2>
-          <label class="filters__label">
-            E-mail:*
-            <input class="filters__input-field filters__input-field--icon filters__input-field--icon-mail" type="email" name="email" value="kuklachev@gmail.com" required>
-          </label>
-          <label class="filters__label">
-            Телефон:*
-            <input class="filters__input-field filters__input-field--icon filters__input-field--icon-phone" type="tel" name="phone" pattern="8[0-9]{10}" value="8 (960) 900-60-90" required>
-          </label>
+          <div class="filters__inner-container">
+            <label class="filters__label filters__label--inner-container">
+              E-mail:*
+              <input class="filters__input-field filters__input-field--icon filters__input-field--icon-mail" type="email" name="email" value="kuklachev@gmail.com" required>
+            </label>
+            <label class="filters__label">
+              Телефон:*
+              <input class="filters__input-field filters__input-field--icon filters__input-field--icon-phone" type="tel" name="phone" pattern="8[0-9]{10}" value="8 (960) 900-60-90" required>
+            </label>
+          </div>
         </div>
 
         <div class="filters__container">
@@ -147,8 +150,8 @@
             </ul>
           </fieldset>
 
-          <div class="filters__container">
-            <button class="filters__button button button--primary" type="submit">Отправить заявку</button>
+          <div class="filters__container filters__container--special">
+            <button class="filters__button button button--primary button--form" type="submit">Отправить заявку</button>
             <span class="filters__text">* — Обязательные поля</span>
           </div>
         </div>
@@ -192,4 +195,6 @@
         </a>
       </div>
     </footer>
+
+    <script src="js/navigation-button.js"></script>
   </body>
