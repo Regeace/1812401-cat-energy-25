@@ -16,13 +16,70 @@
   list-style-type: none;
   background-color: var(--page-bg);
   z-index: 3;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .main-navigation__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 65px;
   height: 65px;
   padding: 0;
+  background-color: var(--page-bg);
   border: none;
+}
+
+.main-navigation__toggle-image {
+  position: relative;
+  width: 24px;
+  height: 1.5px;
+  background-color: var(--black);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: var(--black);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: var(--black);
+  }
+
+  &--open {
+    background-color: transparent;
+  }
+
+  &--open::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 36px;
+    transform: rotate(45deg);
+  }
+
+  &--open::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 36px;
+    transform: rotate(135deg);
+  }
 }
 
 .main-navigation__item {
