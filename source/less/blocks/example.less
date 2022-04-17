@@ -70,6 +70,12 @@
   }
 }
 
+.example__toggle {
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+}
+
 .example__radio {
   &--hidden {
     display: none;
@@ -77,9 +83,31 @@
 }
 
 .example__toggle-text {
+  padding: 13px;
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
+}
+
+.example__toolbar {
+  position: relative;
+  display: inline-block;
+  width: 86px;
+  height: 14px;
+  border: 1px solid var(--border-field-color-secondary);
+  border-radius: 6px;
+  background-color: var(--white);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 36px;
+    height: 6px;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+  }
 }
 
 @media (min-width: @tablet) {
