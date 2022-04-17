@@ -99,6 +99,19 @@
 .main-navigation__link {
   padding: 8px 0;
   color: var(--font-color-primary);
+
+  &--current {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {
@@ -147,11 +160,13 @@
     line-height: 30px;
   }
 
-  .main-navigation__link--special.main-navigation__link--current {
-    border-bottom: 2px solid var(--white);
-  }
+  .main-navigation__link {
+    &--current-special {
+      border-bottom: 2px solid var(--white);
+    }
 
-  .main-navigation__link--special {
-    color: var(--white);
+    &--special {
+      color: var(--white);
+    }
   }
 }

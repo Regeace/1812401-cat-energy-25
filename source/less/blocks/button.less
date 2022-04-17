@@ -20,11 +20,27 @@
   &--primary {
     color: var(--white);
     background-color: var(--primary-color);
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+
+    &:active {
+      color: fade(@white, 30%);
+    }
   }
 
   &--secondary {
     color: var(--font-color-secondary);
     background-color: var(--primary-bg);
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: fade(@font-color-secondary, 30%);
+    }
   }
 
   &--form {
