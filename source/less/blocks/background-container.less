@@ -1,16 +1,16 @@
 .background-container {
-  display: flex;
-  flex-direction: column;
   position: absolute;
   top: 0;
   left: -20px;
-  width: calc(100% + 40px);
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% + 2 * @padding-mobile);
   height: 302px;
   background-image: url("../../img/cat-background-small.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: 320px 302px;
-  z-index: -1;
 }
 
 .background-container__background-color {

@@ -1,5 +1,5 @@
 .example {
-  padding: 25px 20px;
+  padding: 25px @padding-mobile;
   background-color: var(--secondary-bg);
 }
 
@@ -35,9 +35,9 @@
 
 .example__description {
   position: absolute;
-  display: block;
   bottom: -20px;
   left: calc(50% - 45px);
+  display: block;
   width: 87px;
   margin: 0;
   padding: 5px 10px;
@@ -89,11 +89,11 @@
   }
 
   .example__title {
-    padding-left: 30px;
+    padding: 0 @padding-tablet;
   }
 
   .example__text {
-    padding: 0 30px 54px 30px;
+    padding: 0 @padding-tablet 54px @padding-tablet;
     font-size: 16px;
     line-height: 24px;
   }
@@ -102,7 +102,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px 85px 30px;
+    padding: 0 @padding-tablet 85px @padding-tablet;
   }
 
   .example__list {
@@ -183,12 +183,13 @@
 
   .example__title {
     grid-column: 1 / span 2;
-    padding-left: 110px;
+    padding-left: @padding-desktop;
+    padding-right: @padding-desktop;
     background-color: var(--page-bg);
   }
 
   .example__text {
-    padding-left: 110px;
+    padding-left: @padding-desktop;
     padding-bottom: 0;
   }
 

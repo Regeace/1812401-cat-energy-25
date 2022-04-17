@@ -1,16 +1,17 @@
 .promo {
-  padding: 20px;
+  position: relative;
+  padding: 0 @padding-mobile;
 }
 
 @media (min-width: @tablet) {
   .promo {
-    padding: 30px;
+    padding: @padding-tablet;
   }
 }
 
 @media (min-width: @desktop) {
   .promo {
-    padding: 0 110px;
+    padding: 0 @padding-desktop;
   }
 
   .promo__advantages {

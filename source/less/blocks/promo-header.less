@@ -1,13 +1,13 @@
 .promo-header {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   min-height: 490px;
   padding-top: 27px;
   text-align: center;
   color: var(--white);
-  z-index: 1;
 }
 
 .promo-header__title {
@@ -16,7 +16,7 @@
 
 .promo-header__slogan {
   margin: 0;
-  margin-bottom: 29px;
+  padding-bottom: 29px;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -28,6 +28,7 @@
 }
 
 .promo-header__button {
+  z-index: 1;
   color: var(--white);
 }
 
@@ -46,6 +47,7 @@
   }
 
   .promo-header__slogan {
+    padding-bottom: 50px;
     font-size: 20px;
     line-height: 20px;
   }

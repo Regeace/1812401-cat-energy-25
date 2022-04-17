@@ -7,7 +7,9 @@
 
 .page-footer__map {
   display: block;
-  text-align: center;
+  width: 100vw;
+  height: 362px;
+  border: none;
 }
 
 .page-footer__links-container {
@@ -19,7 +21,7 @@
 }
 
 @media (min-width: @tablet) {
-  .page-footer__map-container {
+  .page-footer__map {
     height: 400px;
   }
 
@@ -32,6 +34,6 @@
 
 @media (min-width: @desktop) {
   .page-footer__links-container {
-    padding: 56px 110px;
+    padding: 56px @padding-desktop;
   }
 }
