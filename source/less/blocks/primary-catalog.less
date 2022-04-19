@@ -8,11 +8,27 @@
   list-style-type: none;
 }
 
+.primary-catalog__item {
+  border-top: 1px solid #ebebeb;
+
+  &:last-of-type {
+    border-bottom: 1px solid #ebebeb;
+  }
+}
+
 @media (min-width: @tablet) {
   .primary-catalog__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
+  }
+
+  .primary-catalog__item {
+    border-top: none;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
   }
 }
 

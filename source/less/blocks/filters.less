@@ -7,6 +7,14 @@
   display: none;
 }
 
+.filters__title {
+  align-self: flex-start;
+
+  &--special {
+    max-width: 188px;
+  }
+}
+
 .filters__group {
   display: flex;
   flex-direction: column;
@@ -68,6 +76,12 @@
   .filters {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .filters__title {
+    &--special {
+      max-width: none;
+    }
   }
 
   .filters__container {

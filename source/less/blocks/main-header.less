@@ -5,6 +5,10 @@
   min-height: 65px;
   padding: 11px 0 11px @padding-mobile;
 
+  &--special {
+    border-bottom: 1px solid var(--border-color);
+  }
+
   &--nojs {
     flex-direction: column;
   }
@@ -33,6 +37,10 @@
   .main-header {
     flex-direction: row;
     padding: 20px @padding-tablet;
+
+    &--special {
+      border-bottom: none;
+    }
   }
 
   .main-header__logo-container {
