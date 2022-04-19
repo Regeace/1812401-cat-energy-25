@@ -25,6 +25,17 @@
   &--nojs {
     position: static;
     display: flex;
+    width: 100vw;
+    margin-left: -20px;
+
+    .main-header__logo-container {
+      display: inline-flex;
+      margin-right: auto;
+    }
+
+    .main-navigation {
+      position: relative;
+    }
   }
 }
 
@@ -124,6 +135,11 @@
     display: flex;
     flex-direction: row;
     position: initial;
+
+    &--nojs {
+      width: initial;
+      margin-left: initial;
+    }
   }
 
   .main-navigation__item {

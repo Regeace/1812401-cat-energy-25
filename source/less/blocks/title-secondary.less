@@ -3,9 +3,12 @@
   display: inline-block;
   margin: 0;
   margin-bottom: 36px;
+  margin-left: -22px;
+  padding: 0 22px;
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+  background-color: var(--page-bg);
 
   &--special {
     line-height: 24px;
@@ -15,8 +18,10 @@
     content: "";
     position: absolute;
     top: calc(50% + 4px);
-    left: calc(100% + 22px);
-    width: calc(100vw - 100% - 22px - @padding-mobile);
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    min-width: 320px;
     height: 2px;
     background-color: var(--primary-color);
   }
@@ -27,33 +32,23 @@
     display: inline-flex;
     font-size: 36px;
     line-height: 36px;
-
-    &--special {
-      padding-left: 40px;
-    }
+    padding: 0 40px;
+    margin-left: -40px;
 
     &::before {
-      left: calc(100% + 40px);
-      width: calc(100vw - 100% - 40px - @padding-tablet);
+      left: calc(40px - @padding-tablet);
+    }
+
+    &--special {
+      margin-left: 0;
+
+      &::before {
+        left: -30px;
+      }
     }
 
     &--filters::before {
-      left: calc(100% + 40px);
-      width: calc(100vw - 100% - 40px - 70px);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: calc(50% + 4px);
-      left: -@padding-tablet;
-      width: @padding-tablet;
-      height: 2px;
-      background-color: var(--primary-color);
-    }
-
-    &--filters::after {
-      left: -70px;
+      left: -30px;
     }
   }
 }
@@ -64,17 +59,11 @@
 
     &--special {
       margin-bottom: 80px;
-
-      padding-left: 0;
+      margin-left: -40px;
     }
 
     &::before {
-      width: calc(100vw - 100% - 40px - @padding-desktop);
-    }
-
-    &::after {
-      left: -@padding-desktop;
-      width: 70px;
+      left: calc(40px - @padding-desktop);
     }
   }
 }

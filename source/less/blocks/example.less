@@ -282,7 +282,6 @@
   .example {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: min-content repeat(2, 1fr);
     background-color: var(--secondary-bg);
   }
 
@@ -325,7 +324,7 @@
 
   .example__compare-images {
     grid-column: 2 / 3;
-    grid-row: 2 / 4;
+    grid-row: 2 / span 2;
   }
 
   .example__image {
