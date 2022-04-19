@@ -12,7 +12,7 @@
   </head>
   <body class="page__body">
     <header class="main-header main-header--nojs">
-      <div class="main-header__logo-container">
+      <div class="main-header__logo-container main-header__logo-container--nojs">
         <a class="main-header__logo-image logo-image" href="index.html">
           <img class="main-header__logo-image-simplified" src="img/logo/logo-image-simplified.svg" width="34" height="38" alt="Логотип магазина Кэт энерджи.">
         </a>
@@ -21,7 +21,7 @@
         </a>
       </div>
 
-      <nav class="main-navigation">
+      <nav class="main-navigation main-navigation--special">
         <button class="main-navigation__toggle main-navigation__toggle--nojs" type="button">
           <span class="visually-hidden">Открыть меню.</span>
           <span class="main-navigation__toggle-image"></span>
@@ -59,7 +59,7 @@
           <a class="promo-header__button button button--special button--primary" href="form.html">
             Подобрать программу
           </a>
-          <div class="background-container">
+          <div class="promo-header__background-container background-container">
             <div class="background-container__background-color"></div>
           </div>
         </header>
@@ -136,25 +136,21 @@
         </div>
 
         <div class="example__compare-images">
-          <img class="example__image" src="" width="280" height="232" alt="Кот до кормления.">
-          <img class="example__image example__image--hidden example__image--special" src="" width="280" height="232" alt="Кот в сравнении: до кормления и после кормления.">
-          <img class="example__image example__image--hidden" src="" width="280" height="232" alt="Кот после кормления.">
-          <!-- Подразумеваю, что переключатель картинок подобен разобранному в тренажёре "Плавные переходы".
-          Не стал оборачивать в form (как и select в Седоне). -->
+          <img class="example__image example__image--was" src="" width="280" height="232" alt="Кот до кормления.">
+          <img class="example__image example__image--comparison example__image--hidden example__image--special" src="" width="280" height="232" alt="Кот в сравнении: до кормления и после кормления.">
+          <img class="example__image example__image--become example__image--hidden" src="" width="280" height="232" alt="Кот после кормления.">
           <div class="example__toggle">
-            <label class="example__toggle-text" for="was">
-              <span class="example__toggle-special">Было</span>
-            </label>
-            <input class="example__radio visually-hidden" type="radio" id="was" name="example-image" value="was" checked>
-            <label class="example__toggle-text example__toggle-text--special" for="comparison">
-              <span class="visually-hidden">В сравнении.</span>
-              <span class="example__toolbar"></span>
-            </label>
-            <input class="example__radio example__radio--hidden visually-hidden" type="radio" id="comparison" name="example-image" value="comparison" disabled>
-            <input class="example__radio visually-hidden" type="radio" id="become" name="example-image" value="become">
-            <label class="example__toggle-text" for="become">
-              <span class="example__toggle-special">Стало</span>
-            </label>
+            <button class="example__button example__button--was">
+              <span class="example__button-text">Было</span>
+            </button>
+            <div class="example__toolbar-container">
+              <button class="example__toolbar">
+                <span class="visually-hidden">В сравнении.</span>
+              </button>
+            </div>
+            <button class="example__button example__button--become">
+              <span class="example__button-text">Стало</span>
+            </button>
           </div>
         </div>
       </section>

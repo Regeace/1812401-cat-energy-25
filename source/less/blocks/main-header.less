@@ -11,11 +11,7 @@
 
   &--nojs {
     flex-direction: column;
-
-    .main-header__logo-container {
-      align-self: flex-start;
-      min-height: 65px;
-    }
+    padding: 0;
   }
 }
 
@@ -32,6 +28,14 @@
   &:active {
     opacity: 0.6;
   }
+
+  &--nojs {
+    display: inline-flex;
+    align-self: flex-start;
+    min-height: 65px;
+    margin-right: auto;
+    padding-left: @padding-mobile;
+  }
 }
 
 .main-header__logo-image {
@@ -41,6 +45,7 @@
 @media (min-width: @tablet) {
   .main-header {
     flex-direction: row;
+    align-items: flex-start;
     padding: 20px @padding-tablet;
 
     &--special {
@@ -55,11 +60,19 @@
   .main-header__logo-image {
     padding-right: 20px;
   }
+
+  .main-header__logo-name {
+    padding: 10px 0;
+  }
 }
 
 @media (min-width: @desktop) {
   .main-header {
     z-index: 2;
     padding: 30px @padding-desktop;
+  }
+
+  .main-header__logo-container {
+    padding-top: 20px;
   }
 }

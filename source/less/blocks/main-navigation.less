@@ -26,16 +26,6 @@
     position: static;
     display: flex;
     width: 100vw;
-    margin-left: -20px;
-
-    .main-header__logo-container {
-      display: inline-flex;
-      margin-right: auto;
-    }
-
-    .main-navigation {
-      position: relative;
-    }
   }
 }
 
@@ -132,9 +122,10 @@
   }
 
   .main-navigation__list {
+    position: initial;
     display: flex;
     flex-direction: row;
-    position: initial;
+    justify-content: flex-end;
 
     &--nojs {
       width: initial;
@@ -144,6 +135,7 @@
 
   .main-navigation__item {
     margin-left: 36px;
+    padding: 10px 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -159,7 +151,14 @@
 
 @media (min-width: @desktop) {
   .main-navigation {
-    max-width: 700px;
+    padding-top: 32px;
+
+    &--special {
+      position: absolute;
+      top: 29px;
+      right: @padding-desktop;
+      max-width: 590px;
+    }
   }
 
   .main-navigation__list {
