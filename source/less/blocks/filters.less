@@ -143,6 +143,10 @@
     padding-bottom: 65px;
 
     &--special {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 32px 60px;
       padding-bottom: 7px;
     }
   }
@@ -179,13 +183,6 @@
 
   .filters__input-textarea {
     padding: 10px 19px;
-  }
-
-  .filters__container--special {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 32px 60px;
   }
 
   .filters__text {
