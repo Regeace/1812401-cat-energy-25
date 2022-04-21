@@ -1,5 +1,9 @@
 .main-form {
-  padding: 0 20px;
+  padding: 0 @padding-mobile;
+}
+
+.main-form__title {
+  padding-top: 27px;
 }
 
 .main-form__text {
@@ -10,7 +14,11 @@
 
 @media (min-width: @tablet) {
   .main-form {
-    padding: 0 70px 0 67px;
+    padding: 0 70px;
+  }
+
+  .main-form__title {
+    padding-top: 45px;
   }
 
   .main-form__text {
@@ -22,6 +30,10 @@
 
 @media (min-width: @desktop) {
   .main-form {
-    padding: 0 110px;
+    padding: 0 @padding-desktop;
+  }
+
+  .main-form__title {
+    padding-top: 58px;
   }
 }

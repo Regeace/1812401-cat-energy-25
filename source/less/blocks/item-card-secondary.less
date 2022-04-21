@@ -1,9 +1,15 @@
 .item-card-secondary {
   padding: 13px 0 19px 0;
+  border-top: 1px solid var(--border-field-color-secondary);
+
+  &:last-of-type {
+    border-bottom: 1px solid var(--border-field-color-secondary);
+  }
 }
 
 .item-card-secondary__title {
   margin: 0;
+  padding-bottom: 13px;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
@@ -15,6 +21,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
+  padding-bottom: 15px;
   font-family: var(--secondary-font);
   line-height: 14px;
   color: var(--font-color-secondary);
@@ -25,17 +32,19 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 40px;
-    margin-top: -1px;
     padding: 26px 38px 28px 38px;
-    border: 1px solid var(--border-field-color-secondary);
+    border-left: 1px solid var(--border-field-color-secondary);
+    border-right: 1px solid var(--border-field-color-secondary);
   }
 
   .item-card-secondary__title {
+    padding-bottom: 0;
     font-size: 20px;
     line-height: 20px;
   }
 
   .item-card-secondary__list {
+    padding-bottom: 0;
     font-size: 16px;
     line-height: 20px;
     justify-content: flex-end;
@@ -51,7 +60,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 38px;
     align-items: center;
-    padding: 15px 0 15px 0;
+    padding: 15px 0 16px 0;
     border-left: none;
     border-right: none;
   }

@@ -1,5 +1,5 @@
 .advantages-item {
-  padding: 30px 20px 22px;
+  padding: 30px 20px 11px 20px;
   background-color: var(--primary-bg);
 
   &:not(:last-child) {
@@ -20,21 +20,59 @@
 .advantages-item__text {
   margin: 0;
   padding: 0;
-  padding-bottom: 42px;
+  padding-bottom: 23px;
   font-family: var(--secondary-font);
   color: var(--font-color-secondary);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .advantages-item__link {
+  --arrow-length: 24px;
+  --arrow-padding: 16px;
+
+  position: relative;
+  display: inline-block;
+  margin-top: 8px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 70px;
   font-size: 16px;
   line-height: 16px;
   color: var(--black);
   text-transform: uppercase;
+
+  &:hover {
+    --arrow-length: 32px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% + 1px);
+    left: calc(100% + var(--arrow-padding) - 70px);
+    width: var(--arrow-length);
+    height: 2px;
+    background-color: var(--black);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 4px);
+    left: calc(100% + var(--arrow-padding) + var(--arrow-length) - 70px);
+    border: 6px solid transparent;
+    border-right: 9px solid transparent;
+    border-left: 9px solid var(--black);
+  }
 }
 
 @media (min-width: @tablet) {
   .advantages-item {
-    padding: 77px 316px 57px 52px;
+    padding: 77px 316px 46px 52px;
   }
 
   .advantages-item__title {
@@ -45,13 +83,16 @@
   }
 
   .advantages-item__text {
-    padding-bottom: 52px;
+    padding-bottom: 33px;
     font-size: 16px;
     line-height: 24px;
     color: var(--font-color-primary);
+    border-bottom: none;
   }
 
   .advantages-item__link {
+    --arrow-padding: 25px;
+
     font-size: 20px;
     line-height: 30px;
   }
@@ -59,7 +100,7 @@
 
 @media (min-width: @desktop) {
   .advantages-item {
-    padding: 77px 51px 59px 52px;
+    padding: 77px 51px 48px 52px;
 
     &:not(:last-child) {
       margin-bottom: 0;
@@ -72,6 +113,10 @@
   }
 
   .advantages-item__text {
-    padding-bottom: 27px;
+    padding-bottom: 9px;
+  }
+
+  .advantages-item__link {
+    --arrow-padding: 27px;
   }
 }

@@ -6,11 +6,36 @@
 }
 
 .show-additional-card__button-top {
-  padding: 8px 0;
+  --line-length: 30px;
+  --line-position: 40px;
+
+  position: relative;
+  padding: 78px 0 8px 0;
   font-size: 16px;
   line-height: 20px;
   color: #111111;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: var(--line-position);
+    left: calc(50% - var(--line-length) / 2);
+    width: var(--line-length);
+    height: 2px;
+    background-color: #d3d3d3;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: var(--line-position);
+    left: calc(50% - var(--line-length) / 2);
+    width: var(--line-length);
+    height: 2px;
+    background-color: #d3d3d3;
+    transform: rotate(90deg);
+  }
 }
 
 .show-additional-card__text {
@@ -31,6 +56,9 @@
   }
 
   .show-additional-card__button-top {
+    --line-length: 60px;
+    --line-position: 80px;
+
     max-width: 150px;
     padding-top: 161px;
     padding-bottom: 23px;

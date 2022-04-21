@@ -1,10 +1,12 @@
 .main-navigation__list {
+  position: absolute;
+  left: 0;
+  top: 64px;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  position: absolute;
-  left: 0;
-  top: 87px;
+  min-width: 320px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -15,11 +17,21 @@
   text-transform: uppercase;
   list-style-type: none;
   background-color: var(--page-bg);
-  z-index: 3;
 
   &--closed {
     display: none;
   }
+
+  &--nojs {
+    position: static;
+    display: flex;
+    width: 100vw;
+  }
+}
+
+.main-navigation__item {
+  padding: 22px 0 24px 0;
+  border-top: 1px solid #e6e6e6;
 }
 
 .main-navigation__toggle {
@@ -27,10 +39,14 @@
   justify-content: center;
   align-items: center;
   width: 65px;
-  height: 65px;
+  min-height: 30px;
   padding: 0;
   background-color: var(--page-bg);
   border: none;
+
+  &--nojs {
+    display: none;
+  }
 }
 
 .main-navigation__toggle-image {
@@ -67,8 +83,6 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -6px;
-    width: 36px;
     transform: rotate(45deg);
   }
 
@@ -76,19 +90,26 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -6px;
-    width: 36px;
     transform: rotate(135deg);
   }
 }
 
-.main-navigation__item {
-  padding: 22px 0 24px 0;
-}
-
 .main-navigation__link {
-  padding: 5px 0;
+  padding: 8px 0;
   color: var(--font-color-primary);
+
+  &--current {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet) {
@@ -101,22 +122,43 @@
   }
 
   .main-navigation__list {
+    position: initial;
     display: flex;
     flex-direction: row;
-    position: initial;
+    justify-content: flex-end;
+
+    &--nojs {
+      width: initial;
+      margin-left: initial;
+    }
   }
 
   .main-navigation__item {
     margin-left: 36px;
+    padding: 10px 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+    border-top: none;
+  }
+
+  .main-navigation__link {
+    &--current {
+      border-bottom: 2px solid var(--primary-color);
+    }
   }
 }
 
 @media (min-width: @desktop) {
   .main-navigation {
-    max-width: 700px;
+    padding-top: 32px;
+
+    &--special {
+      position: absolute;
+      top: 29px;
+      right: @padding-desktop;
+      max-width: 590px;
+    }
   }
 
   .main-navigation__list {
@@ -130,7 +172,13 @@
     line-height: 30px;
   }
 
-  .main-navigation__link--special {
-    color: var(--white);
+  .main-navigation__link {
+    &--current-special {
+      border-bottom: 2px solid var(--white);
+    }
+
+    &--special {
+      color: var(--white);
+    }
   }
 }

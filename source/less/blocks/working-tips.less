@@ -1,5 +1,6 @@
 .working-tips {
-  padding: 20px 20px;
+  padding: 20px @padding-mobile;
+  padding-top: 9px;
 }
 
 .working-tips__list {
@@ -28,7 +29,8 @@
 
 @media (min-width: @tablet) {
   .working-tips {
-    padding: 20px 30px;
+    padding: 20px @padding-tablet;
+    padding-top: 15px;
   }
 
   .working-tips__list {
@@ -47,20 +49,21 @@
   }
 
   .working-tips__item::after {
+    content: counter(li) "";
     position: absolute;
     top: 0;
     right: 0;
-    counter-increment: li;
-    content: counter(li) "";
+    z-index: -1;
     font-size: 280px;
     line-height: 280px;
     color: var(--primary-bg);
-    z-index: -1;
+    counter-increment: li;
   }
 
   .working-tips__text {
-    padding-left: 0;
     padding-top: 151px;
+    padding-left: 0;
+    padding-right: 20px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -68,10 +71,15 @@
 
 @media (min-width: @desktop) {
   .working-tips {
-    padding: 20px 110px;
+    padding: 20px @padding-desktop;
   }
 
   .working-tips__list {
     grid-template-columns: repeat(4, 1fr);
+    gap: 70px;
+  }
+
+  .working-tips__text {
+    padding-right: 0;
   }
 }
