@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Подбор программы питания Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="icon" href="favicon.ico"> -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"> -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header main-header--special main-header--nojs">
@@ -90,8 +92,8 @@
         </div>
 
         <div class="filters__container">
-          <h2 class="filters__title filters__title--special title-secondary title-secondary--filters filters__title--contacts">
-            Контактные данные (владельца кота)
+          <h2 class="filters__title filters__title--contacts title-secondary title-secondary--filters">
+            <span class="title-secondary__higher title-secondary__higher--special">Контактные данные (владельца кота)</span>
           </h2>
           <div class="filters__inner-container">
             <label class="filters__label filters__label--inner-container">
@@ -106,15 +108,15 @@
         </div>
 
         <div class="filters__container">
-          <h2 class="filters__title title-secondary title-secondary--filters filters__title--comment">
-            Комментарий
+          <h2 class="filters__title filters__title--comment title-secondary title-secondary--filters">
+            <span class="title-secondary__higher">Комментарий</span>
           </h2>
           <textarea class="filters__input-field filters__input-textarea" name="comment">Расскажите обо всех повадках кота</textarea>
         </div>
 
         <div class="filters__container">
-          <h2 class="filters__title title-secondary title-secondary--filters filters__title--secondary-information">
-            Дополнительно
+          <h2 class="filters__title filters__title--secondary-information title-secondary title-secondary--filters">
+            <span class="title-secondary__higher">Дополнительно</span>
           </h2>
           <fieldset class="filters__group filters__group--checkbox checkbox">
             <legend class="visually-hidden">Необязательные к приобретению товары</legend>

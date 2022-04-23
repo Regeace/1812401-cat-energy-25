@@ -1,3 +1,7 @@
+.secondary-catalog__title {
+  margin-bottom: 36px;
+}
+
 .secondary-catalog__list {
   margin: 0;
   padding: 0;
@@ -5,9 +9,21 @@
   list-style-type: none;
 }
 
+@media (min-width: @tablet) {
+  .secondary-catalog__title {
+    padding-left: 40px;
+    margin-bottom: 80px;
+  }
+}
+
 @media (min-width: @desktop) {
   .secondary-catalog {
     position: relative;
+  }
+
+  .secondary-catalog__title {
+    padding-left: 0;
+    margin-bottom: 80px;
   }
 
   .secondary-catalog__list {

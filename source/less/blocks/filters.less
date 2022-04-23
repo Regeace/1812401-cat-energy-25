@@ -6,10 +6,6 @@
 .filters__title {
   align-self: flex-start;
   margin-bottom: 36px;
-
-  &--special {
-    max-width: 232px;
-  }
 }
 
 .filters__group {
@@ -28,7 +24,7 @@
       position: absolute;
       top: 0;
       left: -@padding-mobile;
-      width: 100vw;
+      width: calc(100% + 2 * @padding-mobile);
       height: 1px;
       background-color: var(--border-color);
     }
@@ -38,7 +34,7 @@
       position: absolute;
       bottom: -8px;
       left: -@padding-mobile;
-      width: 100vw;
+      width: calc(100% + 2 * @padding-mobile);
       height: 1px;
       background-color: var(--border-color);
     }
@@ -97,7 +93,7 @@
   }
 
   &:disabled {
-    background-color: var(--border-status-error);
+    background-color: var(--border-field-color-secondary);
   }
 }
 
@@ -122,10 +118,6 @@
   }
 
   .filters__title {
-    &--special {
-      max-width: none;
-    }
-
     &--contacts {
       margin-bottom: 76px;
     }
