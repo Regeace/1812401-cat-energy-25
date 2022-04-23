@@ -7,8 +7,10 @@
     <meta name="keywords" content="Кэт энерджи, питание для котов, похудение кота, набор массы кота">
     <meta name="description" content="Кэт энерджи. Функциональное питание для котов">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="icon" href="favicon.ico"> -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"> -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/favicon-180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header main-header--nojs">
@@ -55,7 +57,11 @@
             Функциональное питание для котов
           </h2>
           <p class="promo-header__slogan">Занялся собой? Займись котом!</p>
-          <img class="promo-header__image" src="" width="280" height="270" alt="Корм Кэт энерджи курица.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index-can.png 1x, img/index-can-2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet-2x.png 2x">
+            <img class="promo-header__image" src="img/index-can-mobile.png" width="280" height="270" srcset="img/index-can-mobile-2x.png 2x" alt="Корм Кэт энерджи курица.">
+          </picture>
           <a class="promo-header__button button button--special button--primary" href="form.html">
             Подобрать программу
           </a>
@@ -136,9 +142,15 @@
         </div>
 
         <div class="example__compare-images">
-          <img class="example__image example__image--was" src="" width="280" height="232" alt="Кот до кормления.">
-          <img class="example__image example__image--comparison example__image--hidden example__image--special" src="" width="280" height="232" alt="Кот в сравнении: до кормления и после кормления.">
-          <img class="example__image example__image--become example__image--hidden" src="" width="280" height="232" alt="Кот после кормления.">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/cat-before.png 1x, img/cat-before-2x.png 2x">
+            <img class="example__image example__image--was" src="img/cat-before-small.png" width="280" height="232" srcset="img/cat-before-small-2x.png 2x" alt="Кот до кормления.">
+          </picture>
+          <img class="example__image example__image--comparison example__image--hidden example__image--special" src="img/cat-in-comparison.png" width="280" height="232" srcset="img/cat-in-comparison-2x.png 2x" alt="Кот в сравнении: до кормления и после кормления.">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/cat-become.png 1x, img/cat-become-2x.png 2x">
+            <img class="example__image example__image--become example__image--hidden" src="img/cat-become-small.png" width="280" height="232" srcset="img/cat-become-small-2x.png 2x" alt="Кот после кормления.">
+          </picture>
           <div class="example__toggle">
             <button class="example__button example__button--was" type="button">
               <span class="example__button-text">Было</span>
