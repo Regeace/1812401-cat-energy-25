@@ -1,3 +1,31 @@
 .logo-image {
   display: block;
 }
+
+.logo-image__original {
+  display: none;
+}
+
+.logo-image__extended {
+  display: none;
+}
+
+@media (min-width: @tablet) {
+  .logo-image__simplified {
+    display: none;
+  }
+
+  .logo-image__original {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop) {
+  .logo-image__original {
+    display: none;
+  }
+
+  .logo-image__extended {
+    display: block;
+  }
+}

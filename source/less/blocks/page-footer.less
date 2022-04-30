@@ -24,9 +24,17 @@
 }
 
 .page-footer__logo-name {
-  width: calc(100% - 2 * @padding-mobile);
-  min-height: 90px;
+  min-width: 130px;
+  min-height: 94px;
   border-bottom: 1px solid var(--border-color);
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__social-list {
@@ -49,7 +57,7 @@
     flex-direction: row;
     justify-content: space-between;
     max-height: 150px;
-    padding: 56px;
+    padding: 56px @padding-tablet;
   }
 
   .page-footer__logo-name {
