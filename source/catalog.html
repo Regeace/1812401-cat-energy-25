@@ -14,9 +14,11 @@
     <header class="main-header main-header--special main-header--nojs">
       <div class="main-header__logo-container main-header__logo-container--nojs">
         <a class="main-header__logo-image logo-image" href="index.html">
-          <img class="logo-image__simplified" src="img/logo/logo-image-simplified.svg" width="34" height="38" alt="Логотип магазина Кэт энерджи.">
-          <img class="logo-image__original" src="img/logo/logo-image-original.svg" width="60" height="52" alt="Логотип магазина Кэт энерджи.">
-          <img class="logo-image__extended" src="img/logo/logo-image-extended.svg" width="71" height="60" alt="Логотип магазина Кэт энерджи.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-image-extended.svg" width="71" height="60">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-image-original.svg" width="60" height="52">
+            <img class="logo-image__simplified" src="img/logo/logo-image-simplified.svg" width="34" height="38" alt="Логотип магазина Кэт энерджи.">
+          </picture>
         </a>
         <a class="main-header__logo-name logo-name" href="index.html">
           <span class="visually-hidden">Кэт энерджи.</span>
@@ -332,24 +334,39 @@
 
       <div class="page-footer__links-container">
         <a class="page-footer__logo-name logo-name" href="index.html">
-          <img class="logo-name__image" src="" width="" height="" alt="Кэт энерджи.">
+          <img class="logo-name__footer-image" src="img/logo/logo-text.svg" width="128" height="24" alt="Кэт энерджи.">
         </a>
         <ul class="page-footer__social-list social">
           <li class="social__item">
             <span class="visually-hidden">Вконтакте.</span>
-            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" rel="noopener nofollow" target="_blank"></a>
+            <a class="social__link" href="https://vk.com/htmlacademy" rel="noopener nofollow" target="_blank">
+              <svg class="social__link--image" width="28" height="22" viewBox="0 0 28 22" fill="#666666">
+                <use href="img/icons/social-sprite.svg#vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
             <span class="visually-hidden">Youtube.</span>
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/c/HTMLAcademyRUS" rel="noopener nofollow" target="_blank"></a>
+            <a class="social__link" href="https://www.youtube.com/c/HTMLAcademyRUS" rel="noopener nofollow" target="_blank">
+              <svg class="social__link--image" width="28" height="22" viewBox="0 0 28 22" fill="#666666">
+                <use href="img/icons/social-sprite.svg#youtube"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
             <span class="visually-hidden">Телеграмм.</span>
-            <a class="social__link social__link--Telegram" href="https://t.me/htmlacademy" rel="noopener nofollow" target="_blank"></a>
+            <a class="social__link" href="https://t.me/htmlacademy" rel="noopener nofollow" target="_blank">
+              <svg class="social__link--image" width="28" height="22" viewBox="0 0 28 22" fill="#666666">
+                <use href="img/icons/social-sprite.svg#telegram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
         <a class="page-footer__html-academy-copyright html-academy-copyright" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener nofollow" target="_blank">
           <span class="html-academy-copyright__text">HTML Academy</span>
+          <svg class="html-academy-copyright__image" width="27" height="34" viewBox="0 0 27 34" fill="#666666">
+            <use href="img/icons/social-sprite.svg#html-academy-logo"></use>
+          </svg>
         </a>
       </div>
     </footer>

@@ -26,7 +26,6 @@
 .page-footer__logo-name {
   min-width: 130px;
   min-height: 94px;
-  border-bottom: 1px solid var(--border-color);
 
   &:hover {
     opacity: 0.8;
@@ -41,6 +40,7 @@
   justify-content: center;
   width: calc(100% - 2 * @padding-mobile);
   min-height: 63px;
+  border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -63,11 +63,11 @@
   .page-footer__logo-name {
     width: auto;
     min-height: 24px;
-    border-bottom: none;
   }
 
   .page-footer__social-list {
     width: auto;
+    border-top: none;
     border-bottom: none;
   }
 }

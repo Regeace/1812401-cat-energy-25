@@ -16,10 +16,11 @@
     <header class="main-header main-header--nojs">
       <div class="main-header__logo-container main-header__logo-container--nojs">
         <a class="main-header__logo-image logo-image" href="index.html">
-          <img class="logo-image__simplified" src="img/logo/logo-image-simplified.svg" width="34" height="38" alt="Логотип магазина Кэт энерджи.">
-          <img class="logo-image__original" src="img/logo/logo-image-original.svg" width="60" height="52" alt="Логотип магазина Кэт энерджи.">
-          <img class="logo-image__extended" src="img/logo/logo-image-extended.svg" width="71" height="60" alt="Логотип магазина Кэт энерджи.">
-        </a>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/logo-image-extended.svg" width="71" height="60">
+            <source media="(min-width: 768px)" srcset="img/logo/logo-image-original.svg" width="60" height="52">
+            <img class="logo-image__simplified" src="img/logo/logo-image-simplified.svg" width="34" height="38" alt="Логотип магазина Кэт энерджи.">
+          </picture>
         <a class="main-header__logo-name logo-name" href="index.html">
           <span class="visually-hidden">Кэт энерджи.</span>
           <svg class="logo-name__image" width="101" height="18" viewBox="0 0 101 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,6 +72,9 @@
           </h2>
           <p class="promo-header__slogan">Занялся собой? Займись котом!</p>
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can.webp 1x, img/index-can-2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet.webp 1x, img/index-can-tablet-2x.webp 2x">
+            <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile-2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/index-can.png 1x, img/index-can-2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet-2x.png 2x">
             <img class="promo-header__image" src="img/index-can-mobile.png" width="280" height="270" srcset="img/index-can-mobile-2x.png 2x" alt="Корм Кэт энерджи курица.">
@@ -205,19 +209,34 @@
         <ul class="page-footer__social-list social">
           <li class="social__item">
             <span class="visually-hidden">Вконтакте.</span>
-            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" rel="noopener nofollow" target="_blank"></a>
+            <a class="social__link" href="https://vk.com/htmlacademy" rel="noopener nofollow" target="_blank">
+              <svg class="social__link--image" width="28" height="22" viewBox="0 0 28 22" fill="#666666">
+                <use href="img/icons/social-sprite.svg#vk"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
             <span class="visually-hidden">Youtube.</span>
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/c/HTMLAcademyRUS" rel="noopener nofollow" target="_blank"></a>
+            <a class="social__link" href="https://www.youtube.com/c/HTMLAcademyRUS" rel="noopener nofollow" target="_blank">
+              <svg class="social__link--image" width="28" height="22" viewBox="0 0 28 22" fill="#666666">
+                <use href="img/icons/social-sprite.svg#youtube"></use>
+              </svg>
+            </a>
           </li>
           <li class="social__item">
             <span class="visually-hidden">Телеграмм.</span>
-            <a class="social__link social__link--Telegram" href="https://t.me/htmlacademy" rel="noopener nofollow" target="_blank"></a>
+            <a class="social__link" href="https://t.me/htmlacademy" rel="noopener nofollow" target="_blank">
+              <svg class="social__link--image" width="28" height="22" viewBox="0 0 28 22" fill="#666666">
+                <use href="img/icons/social-sprite.svg#telegram"></use>
+              </svg>
+            </a>
           </li>
         </ul>
         <a class="page-footer__html-academy-copyright html-academy-copyright" href="https://htmlacademy.ru/intensive/adaptive" rel="noopener nofollow" target="_blank">
           <span class="html-academy-copyright__text">HTML Academy</span>
+          <svg class="html-academy-copyright__image" width="27" height="34" viewBox="0 0 27 34" fill="#666666">
+            <use href="img/icons/social-sprite.svg#html-academy-logo"></use>
+          </svg>
         </a>
       </div>
     </footer>
