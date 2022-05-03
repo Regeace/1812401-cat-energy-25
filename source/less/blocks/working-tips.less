@@ -14,9 +14,28 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 60px 60px;
 
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  &--leaf {
+    background-image: url("../../img/icons/tips-leaf.svg");
+  }
+
+  &--liquid {
+    background-image: url("../../img/icons/tips-liquid.svg");
+  }
+
+  &--tablewear {
+    background-image: url("../../img/icons/tips-tablewear.svg");
+  }
+
+  &--scales {
+    background-image: url("../../img/icons/tips-scales.svg");
   }
 }
 
@@ -42,6 +61,7 @@
   .working-tips__item {
     position: relative;
     min-height: 280px;
+    background-size: 80px 80px;
 
     &:not(:last-child) {
       margin-bottom: 0;
@@ -51,7 +71,7 @@
   .working-tips__item::after {
     content: counter(li) "";
     position: absolute;
-    top: 0;
+    top: -40px;
     right: 0;
     z-index: -1;
     font-size: 280px;
@@ -61,7 +81,7 @@
   }
 
   .working-tips__text {
-    padding-top: 151px;
+    padding-top: 110px;
     padding-left: 0;
     padding-right: 20px;
     font-size: 16px;

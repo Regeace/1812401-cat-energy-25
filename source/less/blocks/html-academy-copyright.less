@@ -1,6 +1,33 @@
 .html-academy-copyright {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 2 * @padding-mobile);
+  max-width: 280px;
   padding: 20px 0;
+  font-family: var(--secondary-font);
   font-size: 16px;
+
+  &:hover .html-academy-copyright__image {
+    fill: var(--primary-color);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.html-academy-copyright__text {
+  color: var(--font-color-secondary);
+}
+
+@media (min-width: @tablet) {
+  .html-academy-copyright {
+    width: fit-content;
+    max-width: 400px;
+  }
+
+  .html-academy-copyright__text {
+    padding-right: 22px;
+  }
 }

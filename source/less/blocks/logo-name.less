@@ -1,3 +1,19 @@
 .logo-name {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: @tablet) {
+  .logo-name__image {
+    width: 120px;
+    height: 19px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .logo-name__image {
+    width: 131px;
+    height: 21px;
+  }
 }

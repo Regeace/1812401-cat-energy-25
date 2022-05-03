@@ -52,6 +52,7 @@
 }
 
 .filters__label {
+  position: relative;
   display: flex;
   align-items: center;
   color: var(--font-color-secondary);
@@ -76,6 +77,11 @@
 
   &--icon {
     border: 1px solid var(--border-field-color-secondary);
+
+    &:focus-visible + .filters__input-icon {
+      fill: var(--primary-color);
+      stroke: var(--primary-color);
+    }
   }
 
   &:hover {
@@ -92,9 +98,19 @@
     outline: 1px solid var(--border-status-error);
   }
 
+  &--error + .filters__input-icon {
+    fill: var(--border-status-error);
+    stroke: var(--border-status-error);
+  }
+
   &:disabled {
     background-color: var(--border-field-color-secondary);
   }
+}
+
+.filters__input-icon {
+  position: absolute;
+  right: 15px;
 }
 
 .filters__input-textarea {
@@ -171,6 +187,10 @@
     min-height: 52px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .filters__input-icon {
+    right: 20px;
   }
 
   .filters__input-textarea {
