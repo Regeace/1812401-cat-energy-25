@@ -81,7 +81,7 @@ const sprite = () => {
       inlineSvg: true
       }))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('build/img/icons'));
 }
 
 // Copy
@@ -122,7 +122,7 @@ const server = (done) => {
 
 const reload = (done) => {
   browser.reload();
-    done();
+  done();
 }
 
 // Watcher
@@ -130,7 +130,7 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build

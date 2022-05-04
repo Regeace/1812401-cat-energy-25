@@ -79,8 +79,13 @@
     border: 1px solid var(--border-field-color-secondary);
 
     &:focus-visible + .filters__input-icon {
-      fill: var(--primary-color);
-      stroke: var(--primary-color);
+      &--email {
+        stroke: var(--primary-color);
+      }
+
+      &--phone {
+        fill: var(--primary-color);
+      }
     }
   }
 
@@ -99,8 +104,13 @@
   }
 
   &--error + .filters__input-icon {
-    fill: var(--border-status-error);
-    stroke: var(--border-status-error);
+    &--email {
+      stroke: var(--border-status-error);
+    }
+
+    &--phone {
+      fill: var(--border-status-error);
+    }
   }
 
   &:disabled {
