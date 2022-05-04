@@ -60,11 +60,19 @@ const copyImages = () => {
 // WebP
 
 const createWebp = () => {
-  return gulp.src(['source/img/*.{png,jpg}', 'source/img/catalog/*.{png,jpg}'])
+  return gulp.src('source/img/*.{png,jpg}')
     .pipe(squoosh({
       webp: {}
     }))
     .pipe(gulp.dest('build/img'))
+}
+
+const createWebpCatalog = () => {
+  return gulp.src('source/img/catalog/*.{png,jpg}')
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img/catalog'))
 }
 
 // SVG
@@ -145,7 +153,8 @@ export const build = gulp.series(
     scripts,
     svg,
     sprite,
-    createWebp
+    createWebp,
+    createWebpCatalog
   ),
 );
 
@@ -161,7 +170,8 @@ export default gulp.series(
     scripts,
     svg,
     sprite,
-    createWebp
+    createWebp,
+    createWebpCatalog
   ),
   gulp.series(
     server,
