@@ -78,14 +78,12 @@
   &--icon {
     border: 1px solid var(--border-field-color-secondary);
 
-    &:focus-visible + .filters__input-icon {
-      &--email {
-        stroke: var(--primary-color);
-      }
+    &:focus-visible + .filters__input-icon--email {
+      stroke: var(--primary-color);
+    }
 
-      &--phone {
-        fill: var(--primary-color);
-      }
+    &:focus-visible + .filters__input-icon--phone {
+      fill: var(--primary-color);
     }
   }
 
