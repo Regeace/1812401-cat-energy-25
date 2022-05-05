@@ -35,12 +35,17 @@
   &:checked + .checkbox__mark::after {
     content: "";
     position: absolute;
-    top: 13px;
-    left: 10px;
+    top: 14px;
+    left: 9px;
     width: 15px;
     height: 2px;
     background-color: var(--primary-color);
     transform: rotate(-45deg);
+  }
+
+  &:focus-visible + .checkbox__mark {
+    border-color: var(--font-color-secondary);
+    outline: 1px solid var(--font-color-secondary);
   }
 
   &:disabled + .checkbox__mark {
@@ -84,8 +89,8 @@
     }
 
     &:checked + .checkbox__mark::after {
-      top: 18px;
-      left: 13px;
+      top: 19px;
+      left: 12px;
       width: 20px;
     }
   }

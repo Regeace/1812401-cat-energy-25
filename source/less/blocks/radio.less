@@ -37,6 +37,11 @@
     border-radius: 50%;
   }
 
+  &:focus-visible + .radio__mark {
+    border-color: var(--font-color-secondary);
+    outline: 1px solid var(--font-color-secondary);
+  }
+
   &:disabled + .radio__mark {
     opacity: 0.3;
   }

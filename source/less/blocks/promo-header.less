@@ -7,6 +7,36 @@
   min-height: 490px;
   text-align: center;
   color: var(--white);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -@padding-mobile;
+    z-index: -1;
+    width: calc(100% + 2 * @padding-mobile);
+    min-height: 302px;
+    background-image: url("../../img/backgrounds/cat-background-small.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 320px 302px;
+    background-color: #4c4b50;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/backgrounds/cat-background-small-2x.jpg");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -@padding-mobile;
+    z-index: -1;
+    width: calc(100% + 2 * @padding-mobile);
+    min-height: 302px;
+    background-color: rgba(104, 183, 56, 0.85);
+  }
 }
 
 .promo-header__title {
@@ -24,20 +54,12 @@
 .promo-header__image {
   display: block;
   margin-bottom: 3px;
+  object-fit: contain;
 }
 
 .promo-header__button {
   z-index: 1;
   color: var(--white);
-}
-
-.promo-header__background-container {
-  position: absolute;
-  top: 0;
-  left: -20px;
-  z-index: -1;
-  display: flex;
-  flex-direction: column;
 }
 
 @media (min-width: @tablet) {
@@ -48,6 +70,14 @@
     padding-left: 90px;
     text-align: left;
     color: var(--font-color-primary);
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .promo-header__title {
@@ -75,16 +105,37 @@
     font-size: 20px;
     line-height: 20px;
   }
-
-  .promo-header__background-container {
-    display: none;
-  }
 }
 
 @media (min-width: @desktop) {
   .promo-header {
     min-height: 700px;
     padding-left: 80px;
+
+    &::before {
+      display: block;
+      right: -@padding-desktop;
+      left: auto;
+      max-width: 720px;
+      min-height: 694px;
+      margin-top: -143px;
+      background-image: url("../../img/backgrounds/cat-background-large.jpg");
+      background-position: 0 100%;
+      background-size: 720px 694px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/backgrounds/cat-background-large-2x.jpg");
+      }
+    }
+
+    &::after {
+      display: block;
+      right: -@padding-desktop;
+      left: auto;
+      max-width: 720px;
+      min-height: 694px;
+      top: -143px;
+    }
   }
 
   .promo-header__image {
@@ -94,12 +145,5 @@
     left: auto;
     width: 552px;
     height: 499px;
-  }
-
-  .promo-header__background-container {
-    display: flex;
-    right: -@padding-desktop;
-    left: auto;
-    top: -150px;
   }
 }
