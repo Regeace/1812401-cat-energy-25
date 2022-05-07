@@ -113,10 +113,6 @@
 }
 
 @media (min-width: @tablet) {
-  .main-navigation {
-    max-width: 800px;
-  }
-
   .main-navigation__toggle {
     display: none;
   }
@@ -136,7 +132,7 @@
 
   .main-navigation__item {
     margin-left: 36px;
-    padding: 10px 0;
+    padding: 13px 0;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
@@ -144,6 +140,8 @@
   }
 
   .main-navigation__link {
+    padding: 8px 0 5px 0;
+
     &--current {
       border-bottom: 2px solid var(--primary-color);
     }
@@ -169,6 +167,7 @@
 
   .main-navigation__item {
     position: initial;
+    padding: 8px 0;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;

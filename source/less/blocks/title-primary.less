@@ -21,16 +21,35 @@
     line-height: 60px;
 
     &--promo {
-      padding-bottom: 40px;
+      padding-bottom: 42px;
       color: var(--font-color-primary);
     }
 
     &--special {
-      padding-bottom: 63px;
+      padding-bottom: 72px;
     }
 
     &--catalog {
+      padding-top: 45px;
       padding-bottom: 84px;
+    }
+
+    &--form {
+      padding-top: 32px;
+      padding-bottom: 54px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .title-primary {
+    &--promo {
+      padding-top: 80px;
+      padding-bottom: 40px;
+    }
+
+    &--form {
+      padding-top: 43px;
     }
   }
 }

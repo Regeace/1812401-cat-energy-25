@@ -1,6 +1,6 @@
 .working-tips {
-  padding: 20px @padding-mobile;
-  padding-top: 9px;
+  padding: @padding-mobile;
+  padding-top: 18px;
 }
 
 .working-tips__list {
@@ -23,24 +23,25 @@
   }
 
   &--leaf {
-    background-image: url("../../img/backgrounds/tips-leaf.svg");
+    background-image: url("../../img/backgrounds/tips-leaf-mobile.svg");
   }
 
   &--liquid {
-    background-image: url("../../img/backgrounds/tips-liquid.svg");
+    background-image: url("../../img/backgrounds/tips-liquid-mobile.svg");
   }
 
   &--tablewear {
-    background-image: url("../../img/backgrounds/tips-tablewear.svg");
+    background-image: url("../../img/backgrounds/tips-tablewear-mobile.svg");
   }
 
   &--scales {
-    background-image: url("../../img/backgrounds/tips-scales.svg");
+    background-image: url("../../img/backgrounds/tips-scales-mobile.svg");
   }
 }
 
 .working-tips__text {
   margin: 0;
+  padding-top: 2px;
   padding-left: 80px;
   font-family: var(--secondary-font);
   color: var(--font-color-secondary);
@@ -55,7 +56,7 @@
   .working-tips__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 37px 154px;
+    gap: 37px 58px;
   }
 
   .working-tips__item {
@@ -66,24 +67,44 @@
     &:not(:last-child) {
       margin-bottom: 0;
     }
-  }
 
-  .working-tips__item::after {
-    content: counter(li) "";
-    position: absolute;
-    top: -40px;
-    right: 0;
-    z-index: -1;
-    font-size: 280px;
-    line-height: 280px;
-    color: var(--primary-bg);
-    counter-increment: li;
+    &::after {
+      content: counter(li) "";
+      position: absolute;
+      top: -40px;
+      right: 76px;
+      z-index: -1;
+      font-size: 280px;
+      line-height: 280px;
+      color: var(--primary-bg);
+      counter-increment: li;
+    }
+
+    &--leaf::after {
+      right: 99px;
+    }
+
+    &--leaf {
+      background-image: url("../../img/backgrounds/tips-leaf.svg");
+    }
+
+    &--liquid {
+      background-image: url("../../img/backgrounds/tips-liquid.svg");
+    }
+
+    &--tablewear {
+      background-image: url("../../img/backgrounds/tips-tablewear.svg");
+    }
+
+    &--scales {
+      background-image: url("../../img/backgrounds/tips-scales.svg");
+    }
   }
 
   .working-tips__text {
-    padding-top: 110px;
+    padding-top: 113px;
     padding-left: 0;
-    padding-right: 20px;
+    padding-right: 60px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -96,10 +117,21 @@
 
   .working-tips__list {
     grid-template-columns: repeat(4, 1fr);
-    gap: 72px;
+    gap: 37px 78px;
+  }
+
+  .working-tips__item {
+    &::after {
+      right: 0;
+    }
+
+    &--leaf::after {
+      right: 22px;
+    }
   }
 
   .working-tips__text {
+    padding-top: 110px;
     padding-right: 0;
   }
 }
