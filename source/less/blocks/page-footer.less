@@ -13,6 +13,19 @@
   height: 362px;
   overflow: hidden;
   border: none;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.page-footer__map-static {
+  display: none;
+
+  &--nojs {
+    display: block;
+    object-fit: contain;
+  }
 }
 
 .page-footer__links-container {
@@ -54,6 +67,13 @@
     height: 400px;
   }
 
+  .page-footer__map-static {
+    &--nojs {
+      width: 768px;
+      height: 400px;
+    }
+  }
+
   .page-footer__links-container {
     flex-direction: row;
     justify-content: space-between;
@@ -76,6 +96,12 @@
 
 @media (min-width: @desktop) {
   .page-footer__links-container {
-    padding: 56px @padding-desktop;
+    padding: 33px @padding-desktop;
+  }
+
+  .page-footer__map-static {
+    &--nojs {
+      width: 1440px;
+    }
   }
 }

@@ -14,11 +14,12 @@
 
 .radio__button {
   position: relative;
-  padding: 10px 10px 10px 45px;
   color: #222222;
   text-transform: uppercase;
 
   &:hover {
+    cursor: pointer;
+
     .radio__mark {
       border-color: var(--border-field-color-secondary-hover);
     }
@@ -53,12 +54,17 @@
 
 .radio__mark {
   position: absolute;
-  top: calc(50% - 15px);
+  top: calc(50% - 7px);
   left: 0;
   width: 30px;
   height: 30px;
   border: 1px solid var(--border-field-color-secondary);
   border-radius: 50%;
+}
+
+.radio__label-text {
+  display: block;
+  padding-left: calc(@padding-mobile + 25px);
 }
 
 @media (min-width: @tablet) {
@@ -71,10 +77,6 @@
     margin-bottom: 23px;
   }
 
-  .radio__button {
-    padding-left: 60px;
-  }
-
   .radio__input-button {
     &:checked + .radio__mark::before {
       top: calc(50% - 9px);
@@ -85,8 +87,12 @@
   }
 
   .radio__mark {
-    top: calc(50% - 20px);
+    top: calc(50% - 4px);
     width: 40px;
     height: 40px;
+  }
+
+  .radio__label-text {
+    padding-left: 60px;
   }
 }

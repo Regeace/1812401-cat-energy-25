@@ -10,10 +10,11 @@
 
 .checkbox__button {
   position: relative;
-  padding: 10px 10px 10px 45px;
   text-transform: uppercase;
 
   &:hover {
+    cursor: pointer;
+
     .checkbox__mark {
       border-color: var(--border-field-color-secondary-hover);
     }
@@ -59,11 +60,16 @@
 
 .checkbox__mark {
   position: absolute;
-  top: 7px;
+  top: -5px;
   left: 0;
   width: 30px;
   height: 30px;
   border: 1px solid var(--border-field-color-secondary);
+}
+
+.checkbox__label-text {
+  display: block;
+  padding-left: calc(@padding-mobile + 25px);
 }
 
 @media (min-width: @tablet) {
@@ -75,10 +81,6 @@
 
   .checkbox__item:not(:last-child) {
     margin-bottom: 0;
-  }
-
-  .checkbox__button {
-    padding-left: 60px;
   }
 
   .checkbox__input-button {
@@ -96,9 +98,13 @@
   }
 
   .checkbox__mark {
-    top: 5px;
+    top: -5px;
     width: 40px;
     height: 40px;
+  }
+
+  .checkbox__label-text {
+    padding-left: 58px;
   }
 }
 

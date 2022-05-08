@@ -31,6 +31,7 @@
   text-transform: uppercase;
   border: 1px solid var(--border-field-color-secondary);
   border-radius: 3px;
+  overflow: hidden;
 }
 
 .example__description {
@@ -173,16 +174,17 @@
   }
 
   .example__description {
-    left: 27px;
+    left: calc(50% - 57px);
     bottom: -10px;
-    width: max-content;
+    min-width: 114px;
     padding: 5px;
     font-size: 14px;
     line-height: 14px;
     background-color: var(--page-bg);
 
     &--special {
-      left: 13px;
+      left: calc(50% - 71px);
+      min-width: 142px;
     }
   }
 
