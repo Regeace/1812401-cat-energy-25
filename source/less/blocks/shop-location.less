@@ -3,6 +3,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 26px 20px;
+  background-color: var(--white);
 
   &--special {
     background-color: var(--primary-bg);
@@ -30,7 +31,7 @@
 
 @media (min-width: @tablet) {
   .shop-location {
-    padding: 60px 70px 56px 70px;
+    padding: 60px 70px;
   }
 
   .shop-location__text {
@@ -40,13 +41,14 @@
 
   .shop-location__address {
     min-width: 160px;
+    margin-top: -4px;
     font-size: 16px;
     text-align: right;
+  }
 
-    &--special {
-      display: inline-block;
-      margin-top: 20px;
-    }
+  .shop-location__address-special {
+    display: inline-block;
+    margin-top: 20px;
   }
 }
 
@@ -57,11 +59,15 @@
     left: 110px;
     z-index: 1;
     width: 565px;
-    padding: 60px 80px 56px 80px;
-    background-color: var(--page-bg);
+    padding: 56px 75px 60px 80px;
+
+    &--special {
+      background-color: var(--white);
+    }
   }
 
   .shop-location__address {
+    margin-top: -4px;
     text-align: left;
   }
 }

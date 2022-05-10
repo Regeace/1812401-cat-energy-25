@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   min-height: 65px;
-  padding: 11px 0 11px @padding-mobile;
+  padding: 10px 0 11px @padding-mobile;
 
   &--special {
     border-bottom: 1px solid var(--border-color);
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: calc(50% + 51px);
+  width: calc(50% + 40px);
 
   &:hover {
     opacity: 0.8;
@@ -42,6 +42,10 @@
   margin-right: auto;
 }
 
+.main-header__logo-name {
+  padding-top: 4px;
+}
+
 @media (min-width: @tablet) {
   .main-header {
     flex-direction: row;
@@ -58,17 +62,23 @@
   }
 
   .main-header__logo-image {
-    padding-right: 10px;
+    padding-top: 0;
+    padding-right: 13px;
   }
 }
 
 @media (min-width: @desktop) {
   .main-header {
     z-index: 2;
+    max-height: 145px;
     padding: 30px @padding-desktop;
   }
 
   .main-header__logo-container {
-    padding-top: 20px;
+    padding-top: 24px;
+  }
+
+  .main-header__logo-image {
+    padding-right: 7px;
   }
 }

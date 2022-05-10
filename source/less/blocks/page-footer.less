@@ -13,6 +13,19 @@
   height: 362px;
   overflow: hidden;
   border: none;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.page-footer__map-static {
+  display: none;
+
+  &--nojs {
+    display: block;
+    object-fit: contain;
+  }
 }
 
 .page-footer__links-container {
@@ -25,7 +38,8 @@
 
 .page-footer__logo-name {
   min-width: 130px;
-  min-height: 94px;
+  min-height: 93px;
+  padding-top: 6px;
 
   &:hover {
     opacity: 0.8;
@@ -53,16 +67,24 @@
     height: 400px;
   }
 
+  .page-footer__map-static {
+    &--nojs {
+      width: 768px;
+      height: 400px;
+    }
+  }
+
   .page-footer__links-container {
     flex-direction: row;
     justify-content: space-between;
     max-height: 150px;
-    padding: 56px @padding-tablet;
+    padding: 35px @padding-tablet;
   }
 
   .page-footer__logo-name {
     width: auto;
     min-height: 24px;
+    padding-top: 0;
   }
 
   .page-footer__social-list {
@@ -74,6 +96,12 @@
 
 @media (min-width: @desktop) {
   .page-footer__links-container {
-    padding: 56px @padding-desktop;
+    padding: 33px @padding-desktop;
+  }
+
+  .page-footer__map-static {
+    &--nojs {
+      width: 1440px;
+    }
   }
 }

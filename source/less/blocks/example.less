@@ -25,12 +25,13 @@
 }
 
 .example__number {
-  padding: 15px 20px;
+  padding: 13px 20px 15px 20px;
   font-size: 24px;
   line-height: 24px;
   text-transform: uppercase;
   border: 1px solid var(--border-field-color-secondary);
   border-radius: 3px;
+  overflow: hidden;
 }
 
 .example__description {
@@ -64,6 +65,7 @@
 
 .example__image {
   display: block;
+  object-fit: contain;
 
   &--hidden {
     display: none;
@@ -73,17 +75,18 @@
 .example__toggle {
   display: flex;
   align-items: center;
-  min-height: 30px;
+  min-height: 62px;
 }
 
 .example__button {
-  padding: 13px;
+  padding: 18px;
   font-family: var(--main-font);
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
   background-color: var(--secondary-bg);
   border: none;
+  cursor: pointer;
 }
 
 .example__toolbar-container {
@@ -97,12 +100,13 @@
   border: 1px solid var(--border-field-color-secondary);
   border-radius: 6px;
   background-color: var(--white);
+  cursor: pointer;
 
   &::before {
     content: "";
     position: absolute;
     top: 3px;
-    left: 3px;
+    left: 5px;
     width: 36px;
     height: 6px;
     background-color: var(--primary-color);
@@ -111,7 +115,7 @@
 
   &--move-right {
     &::before {
-      left: 45px;
+      left: 43px;
     }
   }
 }
@@ -127,7 +131,8 @@
   }
 
   .example__text {
-    padding: 0 @padding-tablet 54px @padding-tablet;
+    margin-top: -8px;
+    padding: 0 calc(@padding-tablet + 10px) 54px @padding-tablet;
     font-size: 16px;
     line-height: 24px;
   }
@@ -137,7 +142,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 @padding-tablet 75px @padding-tablet;
-    margin-bottom: 167px;
+    margin-bottom: 179px;
   }
 
   .example__list {
@@ -147,14 +152,15 @@
 
   .example__list-text {
     max-width: 180px;
-    padding-bottom: 0;
+    padding-bottom: 3px;
     font-size: 20px;
     text-align: right;
+    letter-spacing: 0.2px;
+  }
 
-    &--special {
-      display: inline-block;
-      margin-top: 9px;
-    }
+  .example__list-text-special {
+    display: inline-block;
+    margin-top: 9px;
   }
 
   .example__item {
@@ -162,21 +168,23 @@
   }
 
   .example__number {
+    padding-bottom: 20px;
     font-size: 30px;
     line-height: 37px;
   }
 
   .example__description {
-    left: 30px;
+    left: calc(50% - 57px);
     bottom: -10px;
-    width: max-content;
+    min-width: 114px;
     padding: 5px;
     font-size: 14px;
     line-height: 14px;
     background-color: var(--page-bg);
 
     &--special {
-      left: 10px;
+      left: calc(50% - 71px);
+      min-width: 142px;
     }
   }
 
@@ -186,7 +194,7 @@
   }
 
   .example__image {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     width: 677px;
     height: 511px;
     margin-top: -170px;
@@ -204,7 +212,7 @@
   .example__toggle {
     justify-content: center;
     width: 100%;
-    padding-bottom: 46px;
+    padding-left: 5px;
     background-color: var(--secondary-bg);
   }
 
@@ -213,6 +221,7 @@
   }
 
   .example__button {
+    padding: 18px 23px;
     font-size: 20px;
     line-height: 30px;
 
@@ -307,11 +316,11 @@
   }
 
   .example__text {
-    padding: 70px 165px 65px @padding-desktop;
+    padding: 84px 172px 65px @padding-desktop;
   }
 
   .example__list {
-    padding-bottom: 58px;
+    padding-bottom: 50px;
   }
 
   .example__list-container {
@@ -321,15 +330,16 @@
     justify-content: flex-start;
     margin-bottom: 0;
     padding-left: 110px;
+    padding-bottom: 73px;
   }
 
   .example__list-text {
     max-width: fit-content;
     text-align: left;
+  }
 
-    &--special {
-      margin-left: 63px;
-    }
+  .example__list-text-special {
+    margin-left: 58px;
   }
 
   .example__description {
@@ -342,10 +352,13 @@
   }
 
   .example__image {
-    margin-top: -181px;
+    margin-top: -174px;
+    margin-left: -90px;
   }
 
   .example__toggle {
-    padding-bottom: 58px;
+    justify-content: flex-start;
+    padding-bottom: 54px;
+    padding-left: 10px;
   }
 }

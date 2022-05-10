@@ -46,8 +46,12 @@
   flex-direction: column;
   padding-bottom: 24px;
 
+  &--top {
+    padding-bottom: 35px;
+  }
+
   &--special {
-    padding-bottom: 12px;
+    padding-bottom: 10px;
   }
 }
 
@@ -66,7 +70,7 @@
 .filters__input-field {
   flex-grow: 1;
   min-height: 45px;
-  margin-left: 12px;
+  margin-left: 13px;
   padding: 0 15px;
   font-family: var(--main-font);
   font-size: 16px;
@@ -76,6 +80,7 @@
   border: 1px solid var(--border-field-color-primary);
 
   &--icon {
+    padding: 0 11px;
     border: 1px solid var(--border-field-color-secondary);
 
     &:focus-visible + .filters__input-icon--email {
@@ -114,18 +119,18 @@
   &:disabled {
     background-color: var(--border-field-color-secondary);
   }
+
+  &--textarea {
+    margin: 0;
+    padding: 9px 12px 9px 15px;
+    height: 150px;
+    resize: none;
+  }
 }
 
 .filters__input-icon {
   position: absolute;
   right: 15px;
-}
-
-.filters__input-textarea {
-  margin: 0;
-  padding: 9px 12px 9px 15px;
-  height: 150px;
-  resize: none;
 }
 
 .filters__text {
@@ -144,7 +149,7 @@
 
   .filters__title {
     &--contacts {
-      margin-bottom: 76px;
+      margin-bottom: 81px;
     }
 
     &--comment {
@@ -152,12 +157,24 @@
     }
 
     &--secondary-information {
-      margin-bottom: 62px;
+      margin-bottom: 65px;
     }
   }
 
   .filters__container {
-    padding-bottom: 65px;
+    padding-bottom: 80px;
+
+    &--icon {
+      padding-bottom: 70px;
+    }
+
+    &--textarea {
+      padding-bottom: 70px;
+    }
+
+    &--checkbox {
+      padding-bottom: 67px;
+    }
 
     &--special {
       display: grid;
@@ -184,7 +201,7 @@
     }
 
     &--checkbox {
-      padding-bottom: 59px;
+      padding-bottom: 40px;
     }
   }
 
@@ -194,12 +211,24 @@
 
   .filters__input-field {
     min-height: 52px;
+    margin-left: 20px;
+    padding: 0 18px;
     font-size: 20px;
     line-height: 30px;
+
+    &--icon {
+      margin-left: 18px;
+    }
+
+    &--textarea {
+      margin-left: 0;
+      padding: 10px 12px 9px 18px;
+      height: 174px;
+    }
   }
 
   .filters__input-icon {
-    right: 20px;
+    right: 15px;
   }
 
   .filters__input-textarea {
@@ -214,12 +243,13 @@
 
 @media (min-width: @desktop) {
   .filters__container {
-    padding-bottom: 67px;
+    padding-bottom: 72px;
 
     &--top {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 32px 80px;
+      padding-bottom: 76px;
     }
 
     &--special {
@@ -234,7 +264,7 @@
     }
 
     &--checkbox {
-      padding-bottom: 67px;
+      padding-bottom: 46px;
     }
   }
 

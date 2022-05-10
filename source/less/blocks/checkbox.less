@@ -1,19 +1,20 @@
 .checkbox__list {
   margin: 0;
-  padding: 0;
+  padding: 3px 0 18px 0;
   list-style-type: none;
 }
 
 .checkbox__item:not(:last-child) {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .checkbox__button {
   position: relative;
-  padding: 10px 10px 10px 45px;
   text-transform: uppercase;
 
   &:hover {
+    cursor: pointer;
+
     .checkbox__mark {
       border-color: var(--border-field-color-secondary-hover);
     }
@@ -35,12 +36,17 @@
   &:checked + .checkbox__mark::after {
     content: "";
     position: absolute;
-    top: 13px;
-    left: 10px;
+    top: 14px;
+    left: 9px;
     width: 15px;
     height: 2px;
     background-color: var(--primary-color);
     transform: rotate(-45deg);
+  }
+
+  &:focus-visible + .checkbox__mark {
+    border-color: var(--font-color-secondary);
+    outline: 1px solid var(--font-color-secondary);
   }
 
   &:disabled + .checkbox__mark {
@@ -54,26 +60,27 @@
 
 .checkbox__mark {
   position: absolute;
-  top: 7px;
+  top: -5px;
   left: 0;
   width: 30px;
   height: 30px;
   border: 1px solid var(--border-field-color-secondary);
 }
 
+.checkbox__label-text {
+  display: block;
+  padding-left: calc(@padding-mobile + 25px);
+}
+
 @media (min-width: @tablet) {
   .checkbox__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px 60px;
+    gap: 42px 60px;
   }
 
   .checkbox__item:not(:last-child) {
     margin-bottom: 0;
-  }
-
-  .checkbox__button {
-    padding-left: 60px;
   }
 
   .checkbox__input-button {
@@ -84,16 +91,20 @@
     }
 
     &:checked + .checkbox__mark::after {
-      top: 18px;
-      left: 13px;
+      top: 19px;
+      left: 12px;
       width: 20px;
     }
   }
 
   .checkbox__mark {
-    top: 5px;
+    top: -5px;
     width: 40px;
     height: 40px;
+  }
+
+  .checkbox__label-text {
+    padding-left: 58px;
   }
 }
 

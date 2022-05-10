@@ -1,5 +1,5 @@
 .radio {
-  padding: 24px 0 23px 0;
+  padding: 29px 0 16px 0;
 }
 
 .radio__list {
@@ -14,11 +14,12 @@
 
 .radio__button {
   position: relative;
-  padding: 10px 10px 10px 45px;
   color: #222222;
   text-transform: uppercase;
 
   &:hover {
+    cursor: pointer;
+
     .radio__mark {
       border-color: var(--border-field-color-secondary-hover);
     }
@@ -37,6 +38,11 @@
     border-radius: 50%;
   }
 
+  &:focus-visible + .radio__mark {
+    border-color: var(--font-color-secondary);
+    outline: 1px solid var(--font-color-secondary);
+  }
+
   &:disabled + .radio__mark {
     opacity: 0.3;
   }
@@ -48,7 +54,7 @@
 
 .radio__mark {
   position: absolute;
-  top: calc(50% - 15px);
+  top: calc(50% - 7px);
   left: 0;
   width: 30px;
   height: 30px;
@@ -56,18 +62,19 @@
   border-radius: 50%;
 }
 
+.radio__label-text {
+  display: block;
+  padding-left: calc(@padding-mobile + 25px);
+}
+
 @media (min-width: @tablet) {
   .radio {
-    padding: 30px 28px 25px 28px;
+    padding: 30px 28px 29px 28px;
     border: 1px solid var(--border-field-color-primary);
   }
 
   .radio__item:not(:last-child) {
     margin-bottom: 23px;
-  }
-
-  .radio__button {
-    padding-left: 60px;
   }
 
   .radio__input-button {
@@ -80,8 +87,12 @@
   }
 
   .radio__mark {
-    top: calc(50% - 20px);
+    top: calc(50% - 4px);
     width: 40px;
     height: 40px;
+  }
+
+  .radio__label-text {
+    padding-left: 60px;
   }
 }
